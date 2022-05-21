@@ -24,10 +24,10 @@
 
             <h3>Search for a City</h2>
             <!-- Search Input -->
-            <form id="city-search-form">
+            <form id="citySearchForm">
                 <div class="input d-grid gap-2">
                     <input type="search" class="form-control rounded" placeholder="City Name" aria-label="Search"
-                        aria-describedby="search-addon" id="cityName"/>
+                        aria-describedby="search-addon" id="cityNameSearch"/>
                     <button type="submit" class="btn btn-block btn-light btn-outline-primary">Search</button>
                 </div>
             </form>
@@ -43,7 +43,8 @@
             <!-- Weather data will be displayed here -->
 
             <div class="border p-4 m-4">
-                Current weather data
+                <h2 id="cityNameDisplay"></h2>
+                <p id="currentWeatherParagraph"></p>
             </div>
 
             <div class="border p-4 m-4">
@@ -53,5 +54,7 @@
     </div>
 
     <script src="./assets/script.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script>dayjs().format()</script>
 </body>
 </html>
