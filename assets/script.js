@@ -25,7 +25,7 @@ var formSubmitHandler = function (event) {
 
 var searchCity = function(cityName) {
     // format the github api url
-    var apiGeo = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&appid=" + APIKey
+    var apiGeo = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&appid=" + APIKey
 
     // checks if cityName already exists in the array, if it doesn't, add it to the array of previous searches
     if (previousSearches.indexOf(cityName) === -1){
@@ -87,7 +87,7 @@ var getWeatherInfo = function(cityName) {
 var displayWeatherInfo = function(WeatherInfo) {
     // gets an open weather icon id for the current weather status
     var currentWeatherIcon = WeatherInfo.current.weather[0].icon
-    var iconSource0 = "http://openweathermap.org/img/wn/" + currentWeatherIcon + ".png"
+    var iconSource0 = "https://openweathermap.org/img/wn/" + currentWeatherIcon + ".png"
 
     // reads the current weather description and converts to upper case for better presentation
     var currentDescription = WeatherInfo.current.weather[0].description.toUpperCase();
@@ -126,7 +126,7 @@ var displayWeatherInfo = function(WeatherInfo) {
     for (i = 1; i < 6; i++) {
         var dateDaily = '<strong>' + dayjs.unix(WeatherInfo.daily[i].dt).format('DD/MM/YYYY') + '</strong>';
         var iconSourceDaily = WeatherInfo.daily[i].weather[0].icon;
-        var iconDaily = '<img src="http://openweathermap.org/img/wn/' + iconSourceDaily + '.png">'
+        var iconDaily = '<img src="https://openweathermap.org/img/wn/' + iconSourceDaily + '.png">'
         var tempDaily = "Temp: " + WeatherInfo.daily[i].temp.day + " °C";
         var windDaily = "Wind: " + WeatherInfo.daily[i].wind_speed + " m/s";
         var humidityDaily = "Humidity: " + WeatherInfo.daily[i].humidity + "%";
