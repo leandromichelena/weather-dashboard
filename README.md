@@ -9,7 +9,7 @@ The objective of this exercise is to feature dynamically updated HTML and CSS po
 https://leandromichelena.github.io/weather-dashboard/
 
 ## Page Screenshot
-![](./images/PageScreenshot.png)
+![](./assets/images/PageScreenshot.png)
 
 ## Built With
 * HTML
