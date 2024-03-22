@@ -70,7 +70,7 @@ var getWeatherInfo = function(cityName) {
     }
 
     // uses the lat and lon variables from the previous API call to query the weather data
-    var apiWeather = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=metric&appid=" + APIKey
+    var apiWeather = "https://api.openweathermap.org/data/3.0/onecall?lat=" + lat + "&lon=" + lon + "&units=metric&appid=" + APIKey
 
     fetch(apiWeather).then(function(response){
         if (response.ok) {
